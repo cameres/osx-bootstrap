@@ -44,3 +44,5 @@ fi
 
 # homebrew
 export PATH="/usr/local/sbin:$PATH"
+
+source /Users/cameres/.iterm2_shell_integration.zsh

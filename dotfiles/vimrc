@@ -1,0 +1,20 @@
+" initial vim configuration
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" switches on syntax highlighting
+syntax enable
+
+" 1 tab = 4 spaces
+" number of spaces for each step of auto indent
+set shiftwidth=4
+" number of spaces that tab counts for
+set tabstop=4
+
+" copy the indentation from the previous line, when starting a new line
+set autoindent
+" inserts one extra level of indentation in some cases
+set smartindent

@@ -5,7 +5,7 @@
 # variables: modify to your desire
 dir=$(pwd)
 # brew packages to install
-packages=(go gradle hub maven mongodb mysql node wget)
+packages=(go gradle hub maven mongodb mysql node tmux wget)
 dotfiles=(gitconfig vimrc zshrc)
 
 section(){

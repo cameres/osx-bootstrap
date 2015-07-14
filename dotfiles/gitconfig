@@ -1,0 +1,16 @@
+[user]
+	name = Connor Ameres
+	email = connorameres@gmail.com
+[push]
+	default = simple
+[help]
+	# auto correct for git, wait 2 seconds
+	autocorrect = 20
+[color]
+	ui = 1
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

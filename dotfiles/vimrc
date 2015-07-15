@@ -14,6 +14,15 @@ colorscheme slate
 " display line numbers
 set number
 
+" allow use of detecting file types
+" trigger the FileType event
+" set options based on this
+" see http://vimdoc.sourceforge.net/htmldoc/filetype.html
+filetype plugin indent on
+" used in combination with ex:
+autocmd FileType ruby setlocal sw=2 ts=2 expandtab
+autocmd FileType javascript setlocal sw=2 ts=2 expandtab
+
 " 1 tab = 4 spaces
 " number of spaces for each step of auto indent
 set shiftwidth=4
@@ -24,6 +33,8 @@ set tabstop=4
 set autoindent
 " inserts one extra level of indentation in some cases
 set smartindent
+" indent '}' correctly
+set smarttab
 
 " always display status line
 set laststatus=2

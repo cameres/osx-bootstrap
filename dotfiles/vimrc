@@ -8,6 +8,9 @@ endif
 " switches on syntax highlighting
 syntax enable
 
+" display line numbers
+set number
+
 " 1 tab = 4 spaces
 " number of spaces for each step of auto indent
 set shiftwidth=4
@@ -18,3 +21,8 @@ set tabstop=4
 set autoindent
 " inserts one extra level of indentation in some cases
 set smartindent
+
+" always display status line
+set laststatus=2
+" print the current full file path in status
+set statusline+=%f\ %y

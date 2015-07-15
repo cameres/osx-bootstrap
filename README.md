@@ -7,3 +7,7 @@ I was inspired to create this script from the following projects
 - [michaeljsmalley/dotfiles](https://github.com/michaeljsmalley/dotfiles)
 - [amix/vimrc](https://github.com/amix/vimrc/)
 - [nvie/vimrc](https://github.com/nvie/vimrc)
+- [octocat/.gitignore](https://gist.github.com/octocat/9257657)
+	- common .gitignore configurations
+- [github/gitignore](https://github.com/github/gitignore)
+	- common .gitignore for languages + tools

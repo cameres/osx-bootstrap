@@ -6,7 +6,8 @@
 dir=$(pwd)
 # brew packages to install
 packages=(go gradle hub maven mongodb mysql node tmux wget)
-dotfiles=(gitconfig vimrc zshrc)
+# todo: just loop through files in dotfiles folder
+dotfiles=(gitconfig gitignore vimrc zshrc)
 
 section(){
   printf "\n\033[1;4m$1:\033[24m\n"

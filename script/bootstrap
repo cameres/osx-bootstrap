@@ -6,8 +6,6 @@
 dir=$(pwd)
 # brew packages to install
 packages=(go gradle hub maven mongodb mysql node tmux wget)
-# todo: just loop through files in dotfiles folder
-dotfiles=(gitconfig gitignore vimrc zshrc)
 
 section(){
   printf "\n\033[1;4m$1:\033[24m\n"
@@ -26,11 +24,11 @@ danger(){
 }
 
 section "Creating symlinks for dotfiles"
-# create symlinks for dotfiles
-for file in "${dotfiles[@]}"; do
-  danger "Creating symlink to .$file in home directory."
-  # use pwd
-  ln -si $dir/dotfiles/$file ~/.$file
+# add any symlink any file in dotfiles/
+for file in dotfiles/*; do
+  danger "Creating symlink with $file"
+  # use pwd for correct directory
+  ln -si $dir/$file ~/.${file#*/}
 done
 
 # install rvm + stable ruby

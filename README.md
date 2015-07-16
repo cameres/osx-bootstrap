@@ -1,5 +1,5 @@
 ## osx-bootstrap
-Bootstrap your OSX install with your dotfiles, ruby, zsh, homebrew, and homebrew packages!
+:computer: Bootstrap your OSX install with your dotfiles, ruby, zsh, homebrew, and homebrew packages!
 
 ### Inspiration
 I was inspired to create this script from the following projects
@@ -11,3 +11,5 @@ I was inspired to create this script from the following projects
 	- common .gitignore configurations
 - [github/gitignore](https://github.com/github/gitignore)
 	- common .gitignore for languages + tools
+- [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+	- starting point for script/osx

@@ -5,6 +5,9 @@ if has('mouse')
   set mouse=a
 endif
 
+" remove bell noise
+set visualbell
+
 " switches on syntax highlighting
 syntax enable
 
@@ -13,6 +16,9 @@ colorscheme slate
 
 " display line numbers
 set number
+
+" show location in file
+" set ruler
 
 " allow use of detecting file types
 " trigger the FileType event
@@ -47,3 +53,13 @@ set foldmethod=indent   "fold based on indent
 set nofoldenable        "dont fold by default
 nnoremap <Space> za
 vnoremap <Space> za
+
+" moving around after helpgrep + vimgrep
+nmap <silent> <RIGHT> :cnext<CR>
+nmap <silent> <RIGHT><RIGHT> :cnfile<CR><C-G>
+nmap <silent> <LEFT> :cprev<CR>
+nmap <silent> <LEFT><LEFT> :cpfile<CR><C-G>
+
+
+" look ahead to match a search pattern
+set incsearch

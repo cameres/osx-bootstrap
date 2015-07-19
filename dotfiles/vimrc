@@ -11,6 +11,9 @@ set visualbell
 " switches on syntax highlighting
 syntax enable
 
+" set underline for current line
+set cursorline
+
 " change the default color scheme
 colorscheme slate
 
@@ -49,7 +52,7 @@ set statusline+=%f\ %y
 
 " add code folding settings
 "folding settings
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   "fold based on syntax 
 set nofoldenable        "dont fold by default
 nnoremap <Space> za
 vnoremap <Space> za

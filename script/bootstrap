@@ -7,7 +7,9 @@ source script/osx
 # variables: modify to your desire
 dir=$(pwd)
 # brew packages to install
-packages=(go gradle hub maven mongodb mysql node tmux wget)
+packages=(go gradle hub maven mongodb mysql node tmux wget caskroom/cask/brew-cask)
+# software to install
+casks=(atom dropbox flux firefox gitx iterm2 spectacle transmission virtualbox vlc)
 
 section "Creating symlinks for dotfiles"
 # add any symlink any file in dotfiles/
@@ -26,7 +28,7 @@ else
   info "rvm already installed"
 fi
 
-# install brew packages w/ array arguement
+# install brew packages w/ array arg.
 install_packages(){
   if ! [ -z "$1" ];
     section "Installing brew packages"
@@ -48,6 +50,29 @@ install_packages(){
   fi
 }
 
+# install casks w/ array arg.
+install_casks(){
+  if ! [ -z "$1" ];
+    section "Installing brew casks"
+    then
+    # loop through an package array
+    for cask in "${casks[@]}";
+    do
+	  # TODO: determine if installed or not
+      brew cask install $cask
+      # # determine if installed
+      # installed=`brew ls --versions $package`
+      # if [[ -z "$installed" ]];
+      #   then
+      #   # installing uninstalled package
+      #   success "Installing brew package: $package"
+      #   brew install $package
+      # else
+      #   info "$package already installed"
+      # fi
+    done
+  fi
+}
 # install brew
 section "Installing homebrew"
 # test that we're on osx
@@ -62,6 +87,7 @@ if [ "$(uname -s)" == "Darwin" ];
   fi
   # install any brew packages
   install_packages packages
+  install_casks casks
 fi
 
 # install zsh + oh-my-zsh

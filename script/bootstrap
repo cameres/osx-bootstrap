@@ -59,7 +59,7 @@ install_casks(){
     for cask in "${casks[@]}";
     do
 	  # TODO: determine if installed or not
-      brew cask install $cask
+      brew cask install --appdir=/my/path $cask
       # # determine if installed
       # installed=`brew ls --versions $package`
       # if [[ -z "$installed" ]];

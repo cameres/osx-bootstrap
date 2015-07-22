@@ -66,3 +66,9 @@ nmap <silent> <LEFT><LEFT> :cpfile<CR><C-G>
 
 " look ahead to match a search pattern
 set incsearch
+
+" add pathogen
+execute pathogen#infect()
+
+" map nerdtree toggle
+nmap <silent> <c-n> :NERDTreeToggle<CR>

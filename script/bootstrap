@@ -3,13 +3,14 @@
 # script to initialize osx development env.
 # source other files
 source script/util
+section "Writing osx defaults from script/osx"
 source script/osx
 # variables: modify to your desire
 dir=$(pwd)
 # brew packages to install
 packages=(go gradle hub maven macvim mongodb mysql node scala tmux wget caskroom/cask/brew-cask)
 # software to install
-casks=(atom dropbox flux firefox gitx iterm2 spectacle transmission virtualbox vlc)
+casks=(atom dropbox flux firefox gitx iterm2 spectacle textmate transmission virtualbox vlc)
 
 section "Creating symlinks for dotfiles"
 # add any symlink any file in dotfiles/
@@ -58,18 +59,14 @@ install_casks(){
     # loop through an package array
     for cask in "${casks[@]}";
     do
-	  # TODO: determine if installed or not
-      brew cask install --appdir=/my/path $cask
-      # # determine if installed
-      # installed=`brew ls --versions $package`
-      # if [[ -z "$installed" ]];
-      #   then
-      #   # installing uninstalled package
-      #   success "Installing brew package: $package"
-      #   brew install $package
-      # else
-      #   info "$package already installed"
-      # fi
+      # determine if installed
+      installed="$(brew cask ls $cask 2>&1)"
+      if [[ $installed == *"is not installed"* ]]
+        then
+        brew cask install --appdir=/Applications $cask
+      else
+        info "$cask already installed"
+      fi
     done
   fi
 }

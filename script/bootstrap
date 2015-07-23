@@ -7,7 +7,7 @@ source script/osx
 # variables: modify to your desire
 dir=$(pwd)
 # brew packages to install
-packages=(go gradle hub maven macvim mongodb mysql node tmux wget caskroom/cask/brew-cask)
+packages=(go gradle hub maven macvim mongodb mysql node scala tmux wget caskroom/cask/brew-cask)
 # software to install
 casks=(atom dropbox flux firefox gitx iterm2 spectacle transmission virtualbox vlc)
 

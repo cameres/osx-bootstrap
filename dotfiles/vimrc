@@ -20,9 +20,6 @@ colorscheme slate
 " display line numbers
 set number
 
-" show location in file
-" set ruler
-
 " allow use of detecting file types
 " trigger the FileType event
 " set options based on this
@@ -62,7 +59,6 @@ nmap <silent> <RIGHT> :cnext<CR>
 nmap <silent> <RIGHT><RIGHT> :cnfile<CR><C-G>
 nmap <silent> <LEFT> :cprev<CR>
 nmap <silent> <LEFT><LEFT> :cpfile<CR><C-G>
-
 
 " look ahead to match a search pattern
 set incsearch

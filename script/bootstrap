@@ -12,7 +12,7 @@ dir=$(pwd)
 # brew packages to install
 packages=(go gradle hub maven macvim mongodb mysql node scala tmux wget caskroom/cask/brew-cask)
 # software to install
-casks=(atom dropbox flux firefox gitx iterm2 spectacle textmate transmission virtualbox vlc)
+casks=(atom dropbox eclipse-ide flux firefox gitx iterm2 spectacle textmate transmission virtualbox vlc)
 
 section "Creating symlinks for dotfiles"
 # add any symlink any file in dotfiles/

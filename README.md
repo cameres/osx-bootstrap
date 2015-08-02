@@ -13,3 +13,5 @@ I was inspired to create this script from the following projects
 	- common .gitignore for languages + tools
 - [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 	- starting point for script/osx
+
+### Todo

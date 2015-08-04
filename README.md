@@ -15,3 +15,6 @@ I was inspired to create this script from the following projects
 	- starting point for script/osx
 
 ### Todo
+Here are all the tasks for this project
+- Add a more flexible install for ubuntu/xubuntu
+- Add a flexible install for centos
